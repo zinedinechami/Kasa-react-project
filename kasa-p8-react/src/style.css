@@ -1,1 +1,18 @@
-/*# sourceMappingURL=style.css.map */
+header {
+  width: 100%;
+  height: 70px;
+  background-color: red;
+  display: flex;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  color: white;
+  background-color: black;
+}/*# sourceMappingURL=style.css.map */

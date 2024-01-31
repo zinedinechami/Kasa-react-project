@@ -11,12 +11,13 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 
+// creation du routeur
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     errorElement: <PageError />,
-    Children: [
+    children: [
       {
         path: "Acceuil",
         element: <div>Acceuil</div>,
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
   },
 ]);
 
+// component root, header de la page contenant les liens des routes
 function Root() {
   return (
     <>
@@ -42,10 +44,14 @@ function Root() {
       <div className="container">
         <Outlet />
       </div>
+      <footer>
+        <p>2020 All rights reserved</p>
+      </footer>
     </>
   );
 }
 
+// component page erreur
 function PageError() {
   return (
     <>
@@ -55,6 +61,7 @@ function PageError() {
   );
 }
 
+// affichage du routeur dans l'application avec router providor
 function App() {
   return <RouterProvider router={router} />;
   // const [count, setCount] = useState(0)
