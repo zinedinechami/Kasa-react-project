@@ -10,6 +10,7 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
+import kasa_logo from "./assets/kasa_logo.png";
 
 // creation du routeur
 const router = createBrowserRouter([
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "Acceuil",
-        element: <div>Acceuil</div>,
+        element: <div>Acceuil </div>,
       },
       {
         path: "Propos",
@@ -35,7 +36,7 @@ function Root() {
   return (
     <>
       <header>
-        Kasa
+        <img src={kasa_logo} alt="kasa_logo" />
         <nav>
           <NavLink to="/Acceuil">Accueil</NavLink>
           <NavLink to="/Propos">A propos</NavLink>
