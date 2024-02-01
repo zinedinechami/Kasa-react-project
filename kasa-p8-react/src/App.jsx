@@ -11,6 +11,7 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import kasa_logo from "./assets/kasa_logo.png";
+import kasa_logo_footer from "./assets/kasa_logo_footer.png";
 
 // creation du routeur
 const router = createBrowserRouter([
@@ -46,7 +47,10 @@ function Root() {
         <Outlet />
       </div>
       <footer>
-        <p>2020 All rights reserved</p>
+        <div className="footer__content">
+          <img src={kasa_logo_footer} alt="kasa_logo_footer" />
+          <p> &copy; 2020 Kasa. All rights reserved</p>
+        </div>
       </footer>
     </>
   );
