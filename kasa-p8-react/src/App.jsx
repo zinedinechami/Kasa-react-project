@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import kasa_logo from "./assets/kasa_logo.png";
 import kasa_logo_footer from "./assets/kasa_logo_footer.png";
+import acceuil_header_img from "./assets/accueil_header_img.png";
 
 // creation du routeur
 const router = createBrowserRouter([
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "Acceuil",
-        element: <div>Acceuil </div>,
+        element: <Acceuil />,
       },
       {
         path: "Propos",
@@ -52,6 +53,17 @@ function Root() {
           <p> &copy; 2020 Kasa. All rights reserved</p>
         </div>
       </footer>
+    </>
+  );
+}
+
+function Acceuil() {
+  return (
+    <>
+      <div className="acceuil__header">
+        <img src={acceuil_header_img} alt="" />
+        <h1>Chez Vous, partout et ailleurs</h1>{" "}
+      </div>
     </>
   );
 }
