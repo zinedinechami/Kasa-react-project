@@ -15,6 +15,7 @@ import kasa_logo_footer from "./assets/kasa_logo_footer.png";
 // import acceuil_header_img from "./assets/accueil_header_img.png";
 import Acceuil from "./Acceuil.jsx";
 import PageError from "./Page_Error.jsx";
+import A_Propos from "./A_Propos.jsx";
 
 // creation du routeur
 const router = createBrowserRouter([
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "Propos",
-        element: <div>A propos</div>,
+        element: <A_Propos />,
       },
     ],
   },
