@@ -47,9 +47,7 @@ function Root() {
           <NavLink to="/Propos">A propos</NavLink>
         </nav>
       </header>
-      <div className="container">
-        <Outlet />
-      </div>
+      <Outlet />
       <footer>
         <div className="footer__content">
           <img src={kasa_logo_footer} alt="kasa_logo_footer" />

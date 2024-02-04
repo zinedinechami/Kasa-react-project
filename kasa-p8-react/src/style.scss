@@ -3,6 +3,7 @@
 
 // variables
 $red: #ff6060;
+$grey: #f6f6f6;
 $font: "Montserrat", sans-serif;
 
 body {
@@ -52,7 +53,7 @@ footer {
 // page accueil
 
 .acceuil__header {
-  width: 90%;
+  width: 95%;
   height: 220px;
   margin-left: auto;
   margin-right: auto;
@@ -65,7 +66,7 @@ footer {
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    filter: brightness(70%);
+    filter: brightness(80%);
   }
   h1 {
     text-align: center;
@@ -74,5 +75,45 @@ footer {
     left: 30%;
     font-weight: normal;
     color: white;
+  }
+}
+
+// section acceuil location
+.accueil__location {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  background-color: $grey;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  article {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    background-color: $red;
+    margin-top: 1em;
+    margin-left: 3em;
+    margin-bottom: 1em;
+    position: relative;
+    img {
+      object-fit: cover;
+      width: 340px;
+      height: 340px;
+      border-radius: 10px;
+      // box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+  }
+  &--container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  p {
+    color: white;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
   }
 }
