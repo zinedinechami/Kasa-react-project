@@ -12,7 +12,9 @@ import {
 } from "react-router-dom";
 import kasa_logo from "./assets/kasa_logo.png";
 import kasa_logo_footer from "./assets/kasa_logo_footer.png";
-import acceuil_header_img from "./assets/accueil_header_img.png";
+// import acceuil_header_img from "./assets/accueil_header_img.png";
+import Acceuil from "./Acceuil.jsx";
+import PageError from "./Page_Error.jsx";
 
 // creation du routeur
 const router = createBrowserRouter([
@@ -57,56 +59,9 @@ function Root() {
   );
 }
 
-function Acceuil() {
-  return (
-    <>
-      <div className="acceuil__header">
-        <img src={acceuil_header_img} alt="" />
-        <h1>Chez Vous, partout et ailleurs</h1>{" "}
-      </div>
-    </>
-  );
-}
-
-// component page erreur
-function PageError() {
-  return (
-    <>
-      <h1>404</h1>
-      <h2>Oups! La page que vous demandez n'existe pas</h2>
-    </>
-  );
-}
-
 // affichage du routeur dans l'application avec router providor
 function App() {
   return <RouterProvider router={router} />;
-  // const [count, setCount] = useState(0)
-
-  // return (
-  //   <>
-  //     <div>
-  //       <a href="https://vitejs.dev" target="_blank">
-  //         <img src={viteLogo} className="logo" alt="Vite logo" />
-  //       </a>
-  //       <a href="https://react.dev" target="_blank">
-  //         <img src={reactLogo} className="logo react" alt="React logo" />
-  //       </a>
-  //     </div>
-  //     <h1>Vite + React</h1>
-  //     <div className="card">
-  //       <button onClick={() => setCount((count) => count + 1)}>
-  //         count is {count}
-  //       </button>
-  //       <p>
-  //         Edit <code>src/App.jsx</code> and save to test HMR
-  //       </p>
-  //     </div>
-  //     <p className="read-the-docs">
-  //       Click on the Vite and React logos to learn more
-  //     </p>
-  //   </>
-  // )
 }
 
 export default App;
