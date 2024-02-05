@@ -20,6 +20,19 @@ function Acceuil() {
   );
 }
 
-// todo: fetch img and p from database.json
-
 export default Acceuil;
+
+const json_database = "./database.json";
+const dummmy_json = "https:/jsonplaceholder.typicode.com";
+
+const accueil_section = document.querySelector(".accueil__location--container");
+
+console.log(accueil_section);
+
+fetch(dummmy_json)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+  });
