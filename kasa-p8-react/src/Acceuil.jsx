@@ -1,4 +1,6 @@
+import React, { useState, useEffect } from "react";
 import acceuil_header_img from "./assets/accueil_header_img.png";
+import database from "./database.json";
 
 function Acceuil() {
   return (
@@ -9,11 +11,15 @@ function Acceuil() {
       </div>
       <section className="accueil__location">
         <div className="accueil__location--container">
-          {/* article example */}
-          <article>
-            <img src={acceuil_header_img} alt="" />
-            <p>dog</p>
-          </article>
+          {/* json fetch */}
+          {database.map((database) => {
+            return (
+              <article>
+                <img src={database.cover} alt="" />
+                <p>{database.title}</p>
+              </article>
+            );
+          })}
         </div>
       </section>
     </>
@@ -21,18 +27,3 @@ function Acceuil() {
 }
 
 export default Acceuil;
-
-const json_database = "./database.json";
-const dummmy_json = "https:/jsonplaceholder.typicode.com";
-
-const accueil_section = document.querySelector(".accueil__location--container");
-
-console.log(accueil_section);
-
-fetch(dummmy_json)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-  });
