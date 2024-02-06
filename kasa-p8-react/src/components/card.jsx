@@ -1,14 +1,12 @@
-function Card() {
-  <>
-    {database.map((database) => {
-      return (
-        <article>
-          <img src={database.cover} alt="" />
-          <p>{database.title}</p>
-        </article>
-      );
-    })}
-  </>;
+function Card({ cover, title }) {
+  return (
+    <>
+      <article>
+        <img src={cover} alt="" />
+        <p>{title}</p>
+      </article>
+    </>
+  );
 }
 
 export default Card;
