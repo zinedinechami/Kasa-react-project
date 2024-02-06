@@ -3,6 +3,7 @@ import acceuil_header_img from "./assets/accueil_header_img.png";
 import database from "./database.json";
 import Card from "./components/card";
 import Banner from "./components/banner";
+import Footer from "./components/footer";
 
 function Acceuil() {
   return (
@@ -29,6 +30,7 @@ function Acceuil() {
           {/* <Card cover={database.cover} title={database.title} /> */}
         </div>
       </section>
+      <Footer />
     </>
   );
 }

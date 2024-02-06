@@ -11,11 +11,10 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import kasa_logo from "./assets/kasa_logo.png";
-import kasa_logo_footer from "./assets/kasa_logo_footer.png";
 // import acceuil_header_img from "./assets/accueil_header_img.png";
 import Acceuil from "./Acceuil.jsx";
-import PageError from "./Page_Error.jsx";
 import A_Propos from "./A_Propos.jsx";
+import Footer from "./components/footer.jsx";
 
 // creation du routeur
 const router = createBrowserRouter([
@@ -48,12 +47,17 @@ function Root() {
         </nav>
       </header>
       <Outlet />
-      <footer>
-        <div className="footer__content">
-          <img src={kasa_logo_footer} alt="kasa_logo_footer" />
-          <p> &copy; 2020 Kasa. All rights reserved</p>
-        </div>
-      </footer>
+    </>
+  );
+}
+
+function PageError() {
+  return (
+    <>
+      <Root />
+      <h1>404</h1>
+      <h2>Oups! La page que vous demandez n'existe pas</h2>
+      <Footer />
     </>
   );
 }
