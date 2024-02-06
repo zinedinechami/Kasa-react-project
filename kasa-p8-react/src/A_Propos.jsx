@@ -1,8 +1,10 @@
+import a_propos_header_img from "./assets/a_propos_header_img.png";
+import Banner from "./components/banner";
+
 function A_Propos() {
   return (
     <>
-      {" "}
-      <div>A propos</div>
+      <Banner banner_image={a_propos_header_img} />
     </>
   );
 }
