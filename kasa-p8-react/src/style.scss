@@ -116,3 +116,19 @@ footer {
     left: 1em;
   }
 }
+
+// page error
+.error_page {
+  text-align: center;
+  color: $red;
+  h1 {
+    font-size: 200px;
+  }
+  h2 {
+    font-weight: normal;
+    padding-bottom: 2em;
+  }
+  a {
+    color: $red;
+  }
+}

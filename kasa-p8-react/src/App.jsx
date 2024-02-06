@@ -55,8 +55,14 @@ function PageError() {
   return (
     <>
       <Root />
-      <h1>404</h1>
-      <h2>Oups! La page que vous demandez n'existe pas</h2>
+      <div className="error_page">
+        <h1>404</h1>
+
+        <h2>Oups! La page que vous demandez n'existe pas</h2>
+        <a href="/Acceuil">
+          <p>Retourner sur la page d'accueil</p>
+        </a>
+      </div>
       <Footer />
     </>
   );

@@ -106,4 +106,19 @@ footer .footer__content {
   position: absolute;
   bottom: 1em;
   left: 1em;
+}
+
+.error_page {
+  text-align: center;
+  color: #ff6060;
+}
+.error_page h1 {
+  font-size: 200px;
+}
+.error_page h2 {
+  font-weight: normal;
+  padding-bottom: 2em;
+}
+.error_page a {
+  color: #ff6060;
 }/*# sourceMappingURL=style.css.map */
