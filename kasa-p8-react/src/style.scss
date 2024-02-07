@@ -132,3 +132,33 @@ footer {
     color: $red;
   }
 }
+
+// a propos page
+
+.a_propos_content {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collapse {
+  background-color: $red;
+  font-family: $font;
+  color: white;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  &_content {
+    background-color: #f6f6f6;
+    padding: 18px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    // make content hidden before animation
+    display: block;
+    overflow: hidden;
+    transition: height 200ms;
+  }
+}
