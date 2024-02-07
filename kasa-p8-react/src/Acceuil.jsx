@@ -21,7 +21,7 @@ function Acceuil() {
           {/* json fetch */}
           {database.map((database) => {
             return (
-              <article>
+              <article key={database.id}>
                 <img src={database.cover} alt="" />
                 <p>{database.title}</p>
               </article>
