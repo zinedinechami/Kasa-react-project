@@ -50,9 +50,8 @@ footer {
   }
 }
 
-// page accueil
-
-.acceuil__header {
+// banner component
+.banner {
   width: 85%;
   height: 220px;
   margin-left: auto;
@@ -75,6 +74,9 @@ footer {
     left: 30%;
     font-weight: normal;
     color: white;
+    @media (max-width: 1000px) {
+      left: 15%;
+    }
   }
 }
 
@@ -95,12 +97,19 @@ footer {
     background-color: $red;
     margin: 2em;
     position: relative;
+    @media (max-width: 1000px) {
+      width: 100%;
+      height: 260px;
+    }
     img {
       object-fit: cover;
       width: 340px;
       height: 340px;
       border-radius: 10px;
-      // box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+      @media (max-width: 1000px) {
+        width: 100%;
+        height: 260px;
+      }
     }
   }
   &--container {
@@ -141,6 +150,7 @@ footer {
   margin-right: auto;
 }
 
+// collapse component
 .collapse {
   background-color: $red;
   font-family: $font;
