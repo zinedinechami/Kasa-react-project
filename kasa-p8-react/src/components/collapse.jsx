@@ -14,14 +14,14 @@ function Collapse(prop) {
 const collapse = document.querySelector(".collapse");
 const collapse_content = document.querySelector(".collapse_content");
 
-function openCollapse() {
-  if (collapse_content.style.display === "none") {
-    collapse_content.style.display = "block";
-  } else {
-    collapse_content.style.display = "none";
-  }
-}
+// function openCollapse() {
+//   if (collapse_content.style.display === "none") {
+//     collapse_content.style.display = "block";
+//   } else {
+//     collapse_content.style.display = "none";
+//   }
+// }
 
-collapse.addEventListener("click", openCollapse);
+// collapse.addEventListener("click", openCollapse);
 
 export default Collapse;
