@@ -11,19 +11,21 @@ function Collapse(prop) {
   );
 }
 
-export default Collapse;
-
 const collapse = document.querySelectorAll(".collapse");
 const collapse_content = document.querySelector(".collapse_content");
 
 console.log(collapse);
 
-// function openCollapse() {
-//   if (collapse_content.style.display === "none") {
-//     collapse_content.style.display = "block";
-//   } else {
-//     collapse_content.style.display = "none";
-//   }
-// }
+function openCollapse() {
+  if (collapse_content.style.display === "none") {
+    collapse_content.style.display = "block";
+  } else {
+    collapse_content.style.display = "none";
+  }
+}
 
-// collapse.addEventListener("click", openCollapse);
+for (let i = 0; i < collapse.length; i++) {
+  collapse[i].addEventListener("click", openCollapse);
+}
+
+export default Collapse;
