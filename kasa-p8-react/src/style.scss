@@ -148,6 +148,9 @@ footer {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
+  &-container {
+    padding-bottom: 1em;
+  }
 }
 
 // collapse component

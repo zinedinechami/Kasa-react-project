@@ -21,6 +21,4 @@ function Acceuil() {
   );
 }
 
-// TODO: integrate components
-
 export default Acceuil;

@@ -2,10 +2,10 @@ function Collapse(prop) {
   return (
     <>
       <button type="button" className="collapse">
-        button name
+        {prop.title}
       </button>
       <div className="collapse_content">
-        <p>collapse content</p>
+        <p>{prop.content}</p>
       </div>
     </>
   );
