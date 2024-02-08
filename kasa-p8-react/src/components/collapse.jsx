@@ -4,15 +4,19 @@ function Collapse(prop) {
       <button type="button" className="collapse">
         button name
       </button>
-      <div class="collapse_content">
+      <div className="collapse_content">
         <p>collapse content</p>
       </div>
     </>
   );
 }
 
-const collapse = document.querySelector(".collapse");
+export default Collapse;
+
+const collapse = document.querySelectorAll(".collapse");
 const collapse_content = document.querySelector(".collapse_content");
+
+console.log(collapse);
 
 // function openCollapse() {
 //   if (collapse_content.style.display === "none") {
@@ -23,5 +27,3 @@ const collapse_content = document.querySelector(".collapse_content");
 // }
 
 // collapse.addEventListener("click", openCollapse);
-
-export default Collapse;
