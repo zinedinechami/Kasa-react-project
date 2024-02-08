@@ -28,7 +28,7 @@ nav a {
   text-decoration: none;
   margin-right: 1em;
 }
-nav a :hover {
+nav a .active {
   text-decoration: underline;
 }
 

@@ -33,7 +33,7 @@ nav {
     color: $red;
     text-decoration: none;
     margin-right: 1em;
-    & :hover {
+    .active {
       text-decoration: underline;
     }
   }

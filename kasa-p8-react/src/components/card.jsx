@@ -1,10 +1,16 @@
-function Card({ cover, title }) {
+import database from "../database.json";
+
+function Card() {
   return (
     <>
-      <article>
-        <img src={cover} alt="" />
-        <p>{title}</p>
-      </article>
+      {database.map((database) => {
+        return (
+          <article key={database.id}>
+            <img src={database.cover} alt="" />
+            <p>{database.title}</p>
+          </article>
+        );
+      })}
     </>
   );
 }
