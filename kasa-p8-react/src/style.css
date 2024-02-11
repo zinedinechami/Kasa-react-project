@@ -146,7 +146,7 @@ footer .footer__content {
   margin-right: auto;
 }
 .a_propos_content-container {
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
 }
 
 .collapse {
@@ -159,10 +159,11 @@ footer .footer__content {
   border: none;
   outline: none;
   border-radius: 5px;
+  font-size: 20px;
 }
 .collapse_content {
   background-color: #f6f6f6;
-  padding: 18px;
+  padding: 15px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   display: block;

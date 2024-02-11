@@ -1,31 +1,28 @@
-function Collapse(prop) {
+import { useState } from "react";
+
+function Collapse({ title, content }) {
+  // hook use state objet containing the current value state variable "isActive"
+  // the function "setIsActive" allowing the update of the state
+  // the intial state of "isActive" is false
+  const [open, openActive] = useState(false);
+
   return (
-    <>
-      <button type="button" className="collapse">
-        {prop.title}
+    <div className="collapse_container">
+      <button
+        className="collapse"
+        // event handler on collapse button executing the "openActive" function
+        // toggles the value of "open" between true and false
+        // "toggleOpen" is the parameter of the function which holds the previous value/state of "open"
+        // "!" logical operator that negates the value toggeling, "false" to "true" and "true" to "false"
+        onClick={() => openActive((toggleOpen) => !toggleOpen)}
+      >
+        <div>{title}</div>
+        {/* <div>{isActive ? "-" : "+"}</div> */}
       </button>
-      <div className="collapse_content">
-        <p>{prop.content}</p>
-      </div>
-    </>
+      {/* if "open" value is true, the output will be the div containing the content of the collapse*/}
+      {open && <div className="collapse_content">{content}</div>}
+    </div>
   );
-}
-
-const collapse = document.querySelectorAll(".collapse");
-const collapse_content = document.querySelector(".collapse_content");
-
-console.log(collapse);
-
-function openCollapse() {
-  if (collapse_content.style.display === "none") {
-    collapse_content.style.display = "block";
-  } else {
-    collapse_content.style.display = "none";
-  }
-}
-
-for (let i = 0; i < collapse.length; i++) {
-  collapse[i].addEventListener("click", openCollapse);
 }
 
 export default Collapse;

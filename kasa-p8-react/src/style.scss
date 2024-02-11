@@ -149,7 +149,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   &-container {
-    padding-bottom: 1em;
+    padding-bottom: 1.5em;
   }
 }
 
@@ -164,14 +164,15 @@ footer {
   border: none;
   outline: none;
   border-radius: 5px;
+  font-size: 20px;
   &_content {
     background-color: #f6f6f6;
-    padding: 18px;
+    padding: 15px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     // make content hidden before animation
-    display: block;
-    overflow: hidden;
+    // display: block;
+    // overflow: hidden;
     transition: height 200ms;
   }
 }
