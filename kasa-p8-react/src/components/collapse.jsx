@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Collapse({ title, content }) {
+function Collapse(prop) {
   // hook use state objet containing the current value state variable "isActive"
   // the function "setIsActive" allowing the update of the state
   // the intial state of "isActive" is false
@@ -13,14 +13,14 @@ function Collapse({ title, content }) {
         // event handler on collapse button executing the "openActive" function
         // toggles the value of "open" between true and false
         // "toggleOpen" is the parameter of the function which holds the previous value/state of "open"
-        // "!" logical operator that negates the value toggeling, "false" to "true" and "true" to "false"
+        // logical NOT operator "!" negates the value in result toggeling "false" to "true" and "true" to "false"
         onClick={() => openActive((toggleOpen) => !toggleOpen)}
       >
-        <div>{title}</div>
+        <div>{prop.title}</div>
         {/* <div>{isActive ? "-" : "+"}</div> */}
       </button>
       {/* if "open" value is true, the output will be the div containing the content of the collapse*/}
-      {open && <div className="collapse_content">{content}</div>}
+      {open && <div className="collapse_content">{prop.content}</div>}
     </div>
   );
 }

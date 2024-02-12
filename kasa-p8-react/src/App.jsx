@@ -15,6 +15,7 @@ import kasa_logo from "./assets/kasa_logo.png";
 import Acceuil from "./Acceuil.jsx";
 import A_Propos from "./A_Propos.jsx";
 import Footer from "./components/footer.jsx";
+import FicheLogement from "./Fiche_Logement.jsx";
 
 // creation du routeur
 const router = createBrowserRouter([
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
       {
         path: "Propos",
         element: <A_Propos />,
+      },
+      // retreive path name from id database, attach id to link to this and cards
+      {
+        path: ":id",
+        element: <FicheLogement />,
       },
     ],
   },
