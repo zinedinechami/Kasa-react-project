@@ -50,6 +50,4 @@ function A_Propos() {
   );
 }
 
-// TODO: integrate banner component, create collapse component
-
 export default A_Propos;

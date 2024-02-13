@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import acceuil_header_img from "./assets/accueil_header_img.png";
 import Card from "./components/card";
 import Banner from "./components/banner";

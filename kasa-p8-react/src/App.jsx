@@ -1,17 +1,11 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import { Children } from "react";
 import "./style.css";
 import {
-  Link,
   NavLink,
   Outlet,
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
 import kasa_logo from "./assets/kasa_logo.png";
-// import acceuil_header_img from "./assets/accueil_header_img.png";
 import Acceuil from "./Acceuil.jsx";
 import A_Propos from "./A_Propos.jsx";
 import Footer from "./components/footer.jsx";
@@ -32,10 +26,11 @@ const router = createBrowserRouter([
         path: "Propos",
         element: <A_Propos />,
       },
-      // retreive path name from id database, attach id to link to this and cards
+      // TODO: fix error handling for id route
       {
         path: ":id",
         element: <FicheLogement />,
+        errorElement: <PageError />,
       },
     ],
   },
@@ -64,9 +59,9 @@ function PageError() {
       <div className="error_page">
         <h1>404</h1>
 
-        <h2>Oups! La page que vous demandez n'existe pas</h2>
+        <h2>Oups! La page que vous demandez n&#39; existe pas</h2>
         <a href="/Acceuil">
-          <p>Retourner sur la page d'accueil</p>
+          <p>Retourner sur la page d&#39; accueil</p>
         </a>
       </div>
       <Footer />
