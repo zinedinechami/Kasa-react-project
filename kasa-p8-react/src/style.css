@@ -166,7 +166,54 @@ footer .footer__content {
   padding: 15px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  display: block;
-  overflow: hidden;
   transition: height 200ms;
+}
+
+.logement {
+  margin: 3em;
+}
+.logement_title {
+  color: #ff6060;
+  font-weight: normal;
+}
+.logement_location {
+  color: #ff6060;
+  font-weight: normal;
+}
+.logement .collapse_container {
+  width: 50%;
+  padding: 1em;
+}
+.logement_collapse {
+  display: flex;
+  flex-direction: row;
+}
+
+.carrousel {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 415px;
+  background-color: #ff6060;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 20px;
+}
+.carrousel_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carrousel .arrow {
+  position: absolute;
+}
+.carrousel .arrow_right {
+  right: 10px;
+}
+.carrousel .arrow_left {
+  left: 10px;
 }/*# sourceMappingURL=style.css.map */

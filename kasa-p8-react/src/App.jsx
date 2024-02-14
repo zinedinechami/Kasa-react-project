@@ -11,11 +11,11 @@ import A_Propos from "./A_Propos.jsx";
 import Footer from "./components/footer.jsx";
 import FicheLogement from "./Fiche_Logement.jsx";
 
-// creation du routeur
+// creation du routeur version v6 de react router
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Header />,
     errorElement: <PageError />,
     children: [
       {
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
 ]);
 
 // component root, header de la page contenant les liens des routes
-function Root() {
+function Header() {
   return (
     <>
       <header>
@@ -55,7 +55,7 @@ function Root() {
 function PageError() {
   return (
     <>
-      <Root />
+      <Header />
       <div className="error_page">
         <h1>404</h1>
 
@@ -69,7 +69,7 @@ function PageError() {
   );
 }
 
-// affichage du routeur dans l'application avec router providor
+// affichage du routeur et des components compris dedans, dans l'application avec router providor
 function App() {
   return <RouterProvider router={router} />;
 }

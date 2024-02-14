@@ -1,14 +1,18 @@
 // ex: database.id.image
 // import database from "../database.json";
+import arrow_right from "../assets/arrow_right.png";
+import arrow_left from "../assets/arrow_left.png";
 
 // create prop
 
 function Carrousel() {
   return (
     <>
-      <div>
-        <img src="" alt="" />
-        <p>carrousel test</p>
+      <div className="carrousel">
+        {/* carrousel img */}
+        <img className="carrousel_img" src="" alt="" />
+        <img className="arrow arrow_right" src={arrow_right} alt="" />
+        <img className="arrow arrow_left" src={arrow_left} alt="" />
       </div>
     </>
   );

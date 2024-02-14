@@ -8,3 +8,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <App />
   </React.StrictMode>
 );
+
+// setup de l'application en react, important les modules necassaires, affichant le component app et le style css
+// inject tout dans le root html
+// react strict mode permet de montrer tout les erreurs de l'application
