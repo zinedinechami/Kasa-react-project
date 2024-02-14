@@ -210,6 +210,9 @@ footer .footer__content {
 }
 .carrousel .arrow {
   position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 .carrousel .arrow_right {
   right: 10px;
