@@ -1,15 +1,10 @@
 import "./style.css";
-import {
-  NavLink,
-  Outlet,
-  RouterProvider,
-  createBrowserRouter,
-} from "react-router-dom";
-import kasa_logo from "./assets/kasa_logo.png";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Acceuil from "./Acceuil.jsx";
 import A_Propos from "./A_Propos.jsx";
-import Footer from "./components/footer.jsx";
 import FicheLogement from "./Fiche_Logement.jsx";
+import Header from "./components/header.jsx";
+import PageError from "./Page_Error.jsx";
 
 // creation du routeur version v6 de react router
 const router = createBrowserRouter([
@@ -35,39 +30,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
-// component root, header de la page contenant les liens des routes
-function Header() {
-  return (
-    <>
-      <header>
-        <img src={kasa_logo} alt="kasa_logo" />
-        <nav>
-          <NavLink to="/Acceuil">Accueil</NavLink>
-          <NavLink to="/Propos">A propos</NavLink>
-        </nav>
-      </header>
-      <Outlet />
-    </>
-  );
-}
-
-function PageError() {
-  return (
-    <>
-      <Header />
-      <div className="error_page">
-        <h1>404</h1>
-
-        <h2>Oups! La page que vous demandez n&#39; existe pas</h2>
-        <a href="/Acceuil">
-          <p>Retourner sur la page d&#39; accueil</p>
-        </a>
-      </div>
-      <Footer />
-    </>
-  );
-}
 
 // affichage du routeur et des components compris dedans, dans l'application avec router providor
 function App() {

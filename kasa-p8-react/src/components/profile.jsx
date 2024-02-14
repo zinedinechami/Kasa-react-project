@@ -1,9 +1,11 @@
-function Profile(prop) {
+import example_img from "../assets/example.jpg";
+
+function Profile() {
   return (
     <>
       <div className="profile">
-        <img src={prop.pfp} alt="" />
-        <p>{prop.name}</p>
+        <h2>name</h2>
+        <img src={example_img} alt="" />
       </div>
     </>
   );

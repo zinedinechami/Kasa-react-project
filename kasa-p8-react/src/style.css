@@ -182,11 +182,19 @@ footer .footer__content {
 }
 .logement .collapse_container {
   width: 50%;
-  padding: 1em;
+  padding-right: 1em;
+  padding-top: 1.5em;
 }
 .logement_collapse {
   display: flex;
   flex-direction: row;
+}
+.logement_tag {
+  display: flex;
+  flex-direction: row;
+}
+.logement .tag {
+  margin-right: 1em;
 }
 
 .carrousel {
@@ -219,4 +227,32 @@ footer .footer__content {
 }
 .carrousel .arrow_left {
   left: 10px;
+}
+
+.tag {
+  background-color: #ff6060;
+  width: auto;
+  padding-left: 2em;
+  padding-right: 2em;
+  color: white;
+  text-align: center;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.profile img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+.profile h2 {
+  font-weight: normal;
+  color: #ff6060;
+  padding-right: 1em;
 }/*# sourceMappingURL=style.css.map */

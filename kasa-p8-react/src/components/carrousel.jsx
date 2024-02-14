@@ -11,6 +11,9 @@ function Carrousel(imageUrl) {
   // "setImageIndex" is the function allowing the modification of the stae of "imageIndex"
   const [imageIndex, setImageIndex] = useState(0);
 
+  // function activated by right arrow event handler
+  // uses "setImageIndex" to modify the state of "imageIndex" var
+  // takes into parameter "index" variable to interact with the data of "imageIndex"
   function showNextImage() {
     setImageIndex((index) => {
       if (index === imageUrl.length) return 0;
