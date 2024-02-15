@@ -228,6 +228,11 @@ footer .footer__content {
 .carrousel .arrow_left {
   left: 10px;
 }
+.carrousel_counter {
+  position: absolute;
+  bottom: 1em;
+  color: white;
+}
 
 .tag {
   background-color: #ff6060;

@@ -238,6 +238,11 @@ footer {
       left: 10px;
     }
   }
+  &_counter {
+    position: absolute;
+    bottom: 1em;
+    color: white;
+  }
 }
 
 .tag {
