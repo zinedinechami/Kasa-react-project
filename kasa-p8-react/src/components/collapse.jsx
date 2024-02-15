@@ -13,7 +13,7 @@ function Collapse(prop) {
         // event handler on collapse button executing the "openActive" function
         // toggles the value of "open" between true and false
         // "toggleOpen" is the parameter of the function which holds the previous value/state of "open"
-        // logical NOT operator "!" negates the value in result toggeling "false" to "true" and "true" to "false"
+        // logical NOT operator "!" inverses the boolean value toggeling "false" to "true" and "true" to "false"
         onClick={() => openActive((toggleOpen) => !toggleOpen)}
       >
         <div>{prop.title}</div>

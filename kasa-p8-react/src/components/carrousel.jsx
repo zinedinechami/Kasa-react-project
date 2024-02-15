@@ -1,12 +1,20 @@
 // ex: database.id.image
-// import database from "../database.json";
 import arrow_right from "../assets/arrow_right.png";
 import arrow_left from "../assets/arrow_left.png";
 import { useState } from "react";
 
 // image url is use
-function Carrousel(prop) {
-  // hook use state
+function Carrousel() {
+  // example array of images, to be replaced by a prop
+  const pictures = [
+    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
+    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
+    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
+    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
+    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg",
+  ];
+
+  // hook use state permettant le stockage de valeur et la mise a jour de la valeur stocké
   // "imageIndex" is the variable of the hook containing the state 0
   // "setImageIndex" is the function allowing the modification of the stae of "imageIndex"
   const [imageIndex, setImageIndex] = useState(0);
@@ -14,11 +22,12 @@ function Carrousel(prop) {
   // function activated by right arrow event handler
   // uses "setImageIndex" to modify the state of "imageIndex" var
   // takes into parameter "index" variable to interact with the data of "imageIndex"
-  // if index is equal to the end of the prop length, we return to the first index of the object
+
+  // if index is equal to the end of the prop length - 1 because array is indexed on 0, we return to the first index of the object to return to the first index
   // otherwise we just increase to the next index
   function showNextImage() {
     setImageIndex((index) => {
-      if (index === prop.length) return 0;
+      if (index === pictures.length - 1) return 0;
       return index + 1;
     });
   }
@@ -27,7 +36,7 @@ function Carrousel(prop) {
   // otherwise we just reduce to the previous index
   function showPrevImage() {
     setImageIndex((index) => {
-      if (index === 0) return prop.length - 1;
+      if (index === 0) return pictures.length - 1;
       return index - 1;
     });
   }
@@ -35,7 +44,7 @@ function Carrousel(prop) {
     <>
       <div className="carrousel">
         {/* carrousel img */}
-        <img className="carrousel_img" src={prop[imageIndex]} alt="" />
+        <img className="carrousel_img" src={pictures[imageIndex]} alt="" />
         {/* bouton right */}
         <button onClick={showNextImage} className="arrow arrow_right">
           <img src={arrow_right} alt="" />
@@ -45,7 +54,7 @@ function Carrousel(prop) {
           <img src={arrow_left} alt="" />
         </button>
         <p className="carrousel_counter">
-          {[imageIndex]} / {prop.length}
+          {[imageIndex + 1]} / {pictures.length}
         </p>
       </div>
     </>
