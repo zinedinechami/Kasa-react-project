@@ -4,7 +4,7 @@ import arrow_left from "../assets/arrow_left.png";
 import { useState } from "react";
 
 // image url is use
-function Carrousel(picturesUrl) {
+function Carrousel(prop) {
   // ! temporary example array of images, to be replaced by a "prop"
   // const pictures = [
   //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
@@ -27,7 +27,7 @@ function Carrousel(picturesUrl) {
   // otherwise we just increase to the next index
   function showNextImage() {
     setImageIndex((index) => {
-      if (index === picturesUrl.length - 1) return 0;
+      if (index === prop.length - 1) return 0;
       return index + 1;
     });
   }
@@ -36,7 +36,7 @@ function Carrousel(picturesUrl) {
   // otherwise we just reduce to the previous index
   function showPrevImage() {
     setImageIndex((index) => {
-      if (index === 0) return picturesUrl.length - 1;
+      if (index === 0) return prop.length - 1;
       return index - 1;
     });
   }
@@ -44,7 +44,7 @@ function Carrousel(picturesUrl) {
     <>
       <div className="carrousel">
         {/* carrousel img */}
-        <img className="carrousel_img" src={picturesUrl[imageIndex]} alt="" />
+        <img className="carrousel_img" src={prop[imageIndex]} alt="" />
         {/* bouton right */}
         <button onClick={showNextImage} className="arrow arrow_right">
           <img src={arrow_right} alt="" />
@@ -54,7 +54,7 @@ function Carrousel(picturesUrl) {
           <img src={arrow_left} alt="" />
         </button>
         <p className="carrousel_counter">
-          {[imageIndex + 1]} / {picturesUrl.length}
+          {[imageIndex + 1]} / {prop.length}
         </p>
       </div>
     </>

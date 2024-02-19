@@ -1,7 +1,7 @@
-function Tag() {
+function Tag(prop) {
   return (
     <>
-      <div className="tag">test</div>
+      <div className="tag">{prop.tag_name}</div>
     </>
   );
 }

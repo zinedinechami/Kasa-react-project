@@ -13,7 +13,7 @@ function FicheLogement() {
   // TODO: creer useState prenant en compte une variable contenant les données recuprer par le UseEffect et utiliser la variable dans les props du component
   // donc la variable va contenir le resulat du display find, utilise la fonction du hook usestate dans le use effect pour effectuer cela
 
-  const [info, fetchInfo] = useState("");
+  const [info, fetchInfo] = useState([]);
 
   // TODO: explication du hook useEffect, et de la methode find
   useEffect(() => {
@@ -22,22 +22,25 @@ function FicheLogement() {
     if (database) {
       fetchInfo(database.find((d) => d.id === id));
       // const displayFind = database.find((d) => d.id === id);
-      console.log(info);
     }
-  }, [id, info]);
+  }, [id]);
+
+  console.log(info);
 
   // need to wait for component to load to operate the use effect, or it bugs out
   // need to access info.pictures array too
 
+  // ! Problem within array and objects access within json file
+
   return (
     <>
       <div className="logement">
-        <Carrousel />
+        <Carrousel prop={info.pictures} />
         <div className="logement_info">
-          <h1 className="logement_title">Title</h1>
-          <h2 className="logement_location">Paris, Ile de France</h2>
+          <h1 className="logement_title">{info.title}</h1>
+          <h2 className="logement_location">{info.location}</h2>
         </div>
-        <Profile />
+        <Profile profile_name={info.description} profile_img={info.cover} />
         <h2>Id is {id}</h2>
         <div className="logement_tag">
           <Tag />
