@@ -250,6 +250,9 @@ footer .footer__content {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  position: absolute;
+  right: 3em;
+  padding-top: 1em;
 }
 .profile img {
   width: 65px;
@@ -260,4 +263,5 @@ footer .footer__content {
   font-weight: normal;
   color: #ff6060;
   padding-right: 1em;
+  font-size: large;
 }/*# sourceMappingURL=style.css.map */

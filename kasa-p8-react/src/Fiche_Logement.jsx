@@ -13,7 +13,7 @@ function FicheLogement() {
   // TODO: creer useState prenant en compte une variable contenant les données recuprer par le UseEffect et utiliser la variable dans les props du component
   // donc la variable va contenir le resulat du display find, utilise la fonction du hook usestate dans le use effect pour effectuer cela
 
-  const [info, fetchInfo] = useState([]);
+  const [info, fetchInfo] = useState("");
 
   // TODO: explication du hook useEffect, et de la methode find
   useEffect(() => {
@@ -36,12 +36,13 @@ function FicheLogement() {
     <>
       <div className="logement">
         <Carrousel prop={info.pictures} />
+        <Profile profile_name={"zinedine"} profile_img={info.cover} />
         <div className="logement_info">
-          <h1 className="logement_title">{info.title}</h1>
-          <h2 className="logement_location">{info.location}</h2>
+          <div className="logement_info--titles">
+            <h1 className="logement_title">{info.title}</h1>
+            <h2 className="logement_location">{info.location}</h2>
+          </div>
         </div>
-        <Profile profile_name={info.description} profile_img={info.cover} />
-        <h2>Id is {id}</h2>
         <div className="logement_tag">
           <Tag />
           <Tag />

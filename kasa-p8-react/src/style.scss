@@ -261,6 +261,9 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  position: absolute;
+  right: 3em;
+  padding-top: 1em;
   img {
     width: 65px;
     height: 65px;
@@ -270,5 +273,6 @@ footer {
     font-weight: normal;
     color: $red;
     padding-right: 1em;
+    font-size: large;
   }
 }
