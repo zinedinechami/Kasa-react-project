@@ -4,15 +4,15 @@ import arrow_left from "../assets/arrow_left.png";
 import { useState } from "react";
 
 // image url is use
-function Carrousel() {
-  // example array of images, to be replaced by a prop
-  const pictures = [
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg",
-  ];
+function Carrousel(picturesUrl) {
+  // ! temporary example array of images, to be replaced by a "prop"
+  // const pictures = [
+  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
+  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
+  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
+  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
+  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg",
+  // ];
 
   // hook use state permettant le stockage de valeur et la mise a jour de la valeur stocké
   // "imageIndex" is the variable of the hook containing the state 0
@@ -27,7 +27,7 @@ function Carrousel() {
   // otherwise we just increase to the next index
   function showNextImage() {
     setImageIndex((index) => {
-      if (index === pictures.length - 1) return 0;
+      if (index === picturesUrl.length - 1) return 0;
       return index + 1;
     });
   }
@@ -36,7 +36,7 @@ function Carrousel() {
   // otherwise we just reduce to the previous index
   function showPrevImage() {
     setImageIndex((index) => {
-      if (index === 0) return pictures.length - 1;
+      if (index === 0) return picturesUrl.length - 1;
       return index - 1;
     });
   }
@@ -44,7 +44,7 @@ function Carrousel() {
     <>
       <div className="carrousel">
         {/* carrousel img */}
-        <img className="carrousel_img" src={pictures[imageIndex]} alt="" />
+        <img className="carrousel_img" src={picturesUrl[imageIndex]} alt="" />
         {/* bouton right */}
         <button onClick={showNextImage} className="arrow arrow_right">
           <img src={arrow_right} alt="" />
@@ -54,13 +54,13 @@ function Carrousel() {
           <img src={arrow_left} alt="" />
         </button>
         <p className="carrousel_counter">
-          {[imageIndex + 1]} / {pictures.length}
+          {[imageIndex + 1]} / {picturesUrl.length}
         </p>
       </div>
     </>
   );
 }
 
-// pictures need to match id of current page route, you can do this as a prop directly in the fiche logement page
+// TODO: Add Props, and make arrows and counter dissapear if there is only one image
 
 export default Carrousel;

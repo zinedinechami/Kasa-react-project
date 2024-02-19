@@ -17,12 +17,14 @@ function Collapse(prop) {
         onClick={() => openActive((toggleOpen) => !toggleOpen)}
       >
         <div>{prop.title}</div>
-        {/* <div>{isActive ? "-" : "+"}</div> */}
+        {/* <div className="collapse_arrows">{open ? "-" : "+"}</div> */}
       </button>
       {/* if "open" value is true, the output will be the div containing the content of the collapse*/}
       {open && <div className="collapse_content">{prop.content}</div>}
     </div>
   );
 }
+
+// TODO: Add arrows to collapse, import arrows from an icon library
 
 export default Collapse;

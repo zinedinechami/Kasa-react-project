@@ -5,25 +5,34 @@ import Profile from "./components/profile";
 import Tag from "./components/tag";
 import database from "./database.json";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function FicheLogement() {
-  // variable using params hook that returns the route url
   const { id } = useParams();
   // on accede au id, recupé par le hook params qui recupere la route ":id"
+  // TODO: creer useState prenant en compte une variable contenant les données recuprer par le UseEffect et utiliser la variable dans les props du component
+  // donc la variable va contenir le resulat du display find, utilise la fonction du hook usestate dans le use effect pour effectuer cela
 
-  // TODO: fetch database json, pass the data through jsx, use retrieved info into the props
+  const [info, fetchInfo] = useState("");
+
+  // TODO: explication du hook useEffect, et de la methode find
   useEffect(() => {
+    // condition, si database.json est present, on stock dans une variable
+    // la methode find, prenant en parametre d, fonction fléchée pour recuper l'id du database correspondant a l'id de la route
     if (database) {
-      const displayFind = database.find((d) => d.id === id);
-      console.log(displayFind);
+      fetchInfo(database.find((d) => d.id === id));
+      // const displayFind = database.find((d) => d.id === id);
+      console.log(info);
     }
-  }, [id]);
+  }, [id, info]);
+
+  // need to wait for component to load to operate the use effect, or it bugs out
+  // need to access info.pictures array too
 
   return (
     <>
       <div className="logement">
-        <Carrousel data={database.pictures} />
+        <Carrousel />
         <div className="logement_info">
           <h1 className="logement_title">Title</h1>
           <h2 className="logement_location">Paris, Ile de France</h2>
@@ -35,23 +44,14 @@ function FicheLogement() {
           <Tag />
         </div>
         <div className="logement_collapse">
-          <Collapse title={"Description"} content={database.description} />
-          <Collapse title={"Equipement"} />
+          <Collapse title={"Description"} content={info.description} />
+          <Collapse title={"Equipement"} content={info.equipments} />
         </div>
       </div>
       <Footer />
     </>
   );
 }
-
-// {database.map((database) => {
-//   return (
-//     <div key={id} id={id} className="logement_info">
-//       <h1 className="logement_title">{database.title}</h1>
-//       <h2 className="logement_location">{database.location}</h2>
-//     </div>
-//   );
-// })}
 
 export default FicheLogement;
 
