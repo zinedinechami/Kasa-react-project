@@ -16,6 +16,13 @@ header img {
   padding-left: 6em;
   margin-top: 1em;
 }
+@media (max-width: 1000px) {
+  header img {
+    width: 145px;
+    height: 45px;
+    padding-left: 3em;
+  }
+}
 
 nav {
   position: absolute;
@@ -185,10 +192,13 @@ footer .footer__content {
 .logement_title {
   color: #ff6060;
   font-weight: normal;
+  margin-bottom: 0;
 }
 .logement_location {
   color: #ff6060;
   font-weight: normal;
+  font-size: 1em;
+  margin-top: 0;
 }
 .logement .collapse_container {
   width: 50%;
@@ -254,6 +264,7 @@ footer .footer__content {
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   border-radius: 10px;
+  margin-bottom: 1em;
 }
 
 .profile_ratings {
@@ -284,4 +295,7 @@ footer .footer__content {
   position: absolute;
   right: 3em;
   top: 6em;
+}
+.ratings img {
+  padding-right: 0.5em;
 }/*# sourceMappingURL=style.css.map */

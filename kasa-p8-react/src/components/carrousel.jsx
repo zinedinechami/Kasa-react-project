@@ -17,6 +17,8 @@ function Carrousel(prop) {
 
   const pictures = [prop.imageUrl];
 
+  console.log(pictures);
+
   // hook use state permettant le stockage de valeur et la mise a jour de la valeur stocké
   // "imageIndex" is the variable of the hook containing the state 0
   // "setImageIndex" is the function allowing the modification of the stae of "imageIndex"

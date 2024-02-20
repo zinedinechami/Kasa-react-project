@@ -31,16 +31,13 @@ function FicheLogement() {
 
   // ! Problem within array and objects access within json file
 
-  const pictures_problem = [data.pictures];
-  console.log(pictures_problem);
-
   return (
     <>
       <div className="logement">
         <Carrousel imageUrl={data.pictures} />
         <div className="profile_ratings">
           <Profile profile_name={"zinedine"} profile_img={data.cover} />
-          <Ratings />
+          <Ratings prop={data.rating} />
         </div>
         <div className="logement_info">
           <div className="logement_info--titles">
