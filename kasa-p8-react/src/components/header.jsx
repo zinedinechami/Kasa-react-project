@@ -9,7 +9,7 @@ function Header() {
         <img src={kasa_logo} alt="kasa_logo" />
         <nav>
           <NavLink to="/Acceuil">Accueil</NavLink>
-          <NavLink to="/Propos">A propos</NavLink>
+          <NavLink to="/Propos">A Propos</NavLink>
         </nav>
       </header>
       <Outlet />

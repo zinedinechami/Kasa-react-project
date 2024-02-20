@@ -35,6 +35,7 @@ function FicheLogement() {
     <>
       <div className="logement">
         <Carrousel imageUrl={data.pictures} />
+
         <div className="profile_ratings">
           <Profile profile_name={"zinedine"} profile_img={data.cover} />
           <Ratings prop={data.rating} />
@@ -45,6 +46,7 @@ function FicheLogement() {
             <h2 className="logement_location">{data.location}</h2>
           </div>
         </div>
+
         <div className="logement_tag">
           <Tag />
           <Tag />

@@ -21,7 +21,6 @@ const router = createBrowserRouter([
         path: "Propos",
         element: <A_Propos />,
       },
-      // TODO: fix error handling for id route
       {
         path: ":id",
         element: <FicheLogement />,
