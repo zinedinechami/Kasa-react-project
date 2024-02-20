@@ -18,6 +18,4 @@ function Card() {
   );
 }
 
-// TODO: Explication de la methode map
-
 export default Card;

@@ -90,12 +90,20 @@ footer {
   padding-top: 2em;
   padding-bottom: 2em;
   margin-bottom: 2em;
+  a {
+    width: 340px;
+    height: 340px;
+    margin: 2em;
+    @media (max-width: 1000px) {
+      width: 100%;
+      height: 260px;
+    }
+  }
   article {
     width: 340px;
     height: 340px;
     border-radius: 10px;
     background-color: $red;
-    margin: 2em;
     position: relative;
     @media (max-width: 1000px) {
       width: 100%;
@@ -257,6 +265,10 @@ footer {
   border-radius: 10px;
 }
 
+.profile_ratings {
+  position: relative;
+}
+
 .profile {
   display: flex;
   flex-direction: row;
@@ -275,4 +287,10 @@ footer {
     padding-right: 1em;
     font-size: large;
   }
+}
+
+.ratings {
+  position: absolute;
+  right: 3em;
+  top: 6em;
 }
