@@ -4,22 +4,7 @@ import arrow_left from "../assets/arrow_left.png";
 import { useState } from "react";
 
 // image url is use
-function Carrousel(prop) {
-  // ? Maybe put props into pictures array, than use this array through the compoenent
-  // ! temporary example array of images, to be replaced by a "prop"
-  // const pictures = [
-  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
-  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
-  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
-  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg",
-  // ];
-
-  // ! response blocked by corb bug
-  const pictures = [prop.imageUrl];
-
-  console.log(pictures);
-
+function Carrousel({ pictures }) {
   // hook use state permettant le stockage de valeur et la mise a jour de la valeur stocké
   // "imageIndex" is the variable of the hook containing the state 0
   // "setImageIndex" is the function allowing the modification of the stae of "imageIndex"
@@ -46,16 +31,28 @@ function Carrousel(prop) {
       return index - 1;
     });
   }
+
   return (
     <>
       <div className="carrousel">
-        {/* carrousel img */}
-        <img className="carrousel_img" src={pictures[imageIndex]} alt="" />
-        {/* bouton right */}
+        {/* carrousel img, map the pictures prop, if image is equal to imageIndex state variable, we render the mapped img*/}
+        {pictures.map((picture, index) => {
+          return (
+            <>
+              {index === imageIndex && (
+                <img
+                  key={index}
+                  className="carrousel_img"
+                  src={picture}
+                  alt=""
+                />
+              )}
+            </>
+          );
+        })}
         <button onClick={showNextImage} className="arrow arrow_right">
           <img src={arrow_right} alt="" />
         </button>
-        {/* bouton left */}
         <button onClick={showPrevImage} className="arrow arrow_left">
           <img src={arrow_left} alt="" />
         </button>

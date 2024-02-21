@@ -6,54 +6,43 @@ import Tag from "../components/tag";
 import Ratings from "../components/rating";
 import database from "../database.json";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 function FicheLogement() {
   const { id } = useParams();
-  // on accede au id, recupé par le hook params qui recupere la route ":id"
 
-  const [data, fetchData] = useState("");
+  const findLogement = (id) => {
+    return database.find((d) => d.id === id);
+  };
+  const logement = findLogement(id);
 
-  // TODO: explication du hook useEffect, et de la methode find
-  useEffect(() => {
-    // condition, si database.json est present, on stock dans une variable
-    // la methode find, prenant en parametre d, fonction fléchée pour recuper l'id du database correspondant a l'id de la route
-    if (database) {
-      fetchData(database.find((d) => d.id === id));
-      // const displayFind = database.find((d) => d.id === id);
-    }
-  }, [id]);
-
-  console.log(data);
-
-  // need to wait for component to load to operate the use effect, or it bugs out
-  // need to access info.pictures array too
-
-  // ! Problem within array and objects access within json file
+  const tags = logement.tags.map((tag, index) => {
+    return <Tag key={index} tag_name={tag} />;
+  });
 
   return (
     <>
       <div className="logement">
-        <Carrousel imageUrl={data.pictures} />
+        <Carrousel pictures={logement.pictures} />
 
         <div className="profile_ratings">
-          <Profile profile_name={"zinedine"} profile_img={data.cover} />
-          <Ratings prop={data.rating} />
+          <Profile
+            profile_name={logement.host.name}
+            profile_img={logement.host.picture}
+          />
+          <Ratings prop={logement.rating} />
         </div>
         <div className="logement_info">
           <div className="logement_info--titles">
-            <h1 className="logement_title">{data.title}</h1>
-            <h2 className="logement_location">{data.location}</h2>
+            <h1 className="logement_title">{logement.title}</h1>
+            <h2 className="logement_location">{logement.location}</h2>
           </div>
         </div>
 
-        <div className="logement_tag">
-          <Tag />
-          <Tag />
-        </div>
+        <div className="logement_tag">{tags}</div>
         <div className="logement_collapse">
-          <Collapse title={"Description"} content={data.description} />
-          <Collapse title={"Equipement"} content={data.equipments} />
+          <Collapse title={"Description"} content={logement.description} />
+          <Collapse title={"Equipement"} content={logement.equipments} />
         </div>
       </div>
       <Footer />
