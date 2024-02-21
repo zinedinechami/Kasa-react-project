@@ -1,10 +1,10 @@
-import Footer from "./components/footer";
-import Carrousel from "./components/carrousel";
-import Collapse from "./components/collapse";
-import Profile from "./components/profile";
-import Tag from "./components/tag";
-import Ratings from "./components/rating";
-import database from "./database.json";
+import Footer from "../components/footer";
+import Carrousel from "../components/carrousel";
+import Collapse from "../components/collapse";
+import Profile from "../components/profile";
+import Tag from "../components/tag";
+import Ratings from "../components/rating";
+import database from "../database.json";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 

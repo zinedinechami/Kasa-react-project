@@ -1,7 +1,7 @@
-import acceuil_header_img from "./assets/accueil_header_img.png";
-import Card from "./components/card";
-import Banner from "./components/banner";
-import Footer from "./components/footer";
+import acceuil_header_img from "../assets/accueil_header_img.png";
+import Card from "../components/card";
+import Banner from "../components/banner";
+import Footer from "../components/footer";
 
 function Acceuil() {
   return (
