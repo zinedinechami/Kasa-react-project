@@ -11,15 +11,13 @@ import { useParams } from "react-router-dom";
 function FicheLogement() {
   const { id } = useParams();
 
-  const findLogement = (id) => {
-    return database.find((d) => d.id === id);
-  };
+  function findLogement(id) {
+    return database.find((findObject) => findObject.id === id);
+  }
+
   const logement = findLogement(id);
 
-  const tags = logement.tags.map((tag, index) => {
-    return <Tag key={index} tag_name={tag} />;
-  });
-
+  console.log(logement);
   return (
     <>
       <div className="logement">
@@ -39,9 +37,14 @@ function FicheLogement() {
           </div>
         </div>
 
-        <div className="logement_tag">{tags}</div>
+        <div className="logement_tag">
+          {logement.tags.map((tag, index) => {
+            return <Tag key={index} tag_name={tag} />;
+          })}
+        </div>
         <div className="logement_collapse">
           <Collapse title={"Description"} content={logement.description} />
+
           <Collapse title={"Equipement"} content={logement.equipments} />
         </div>
       </div>

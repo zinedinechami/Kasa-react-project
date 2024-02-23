@@ -16,40 +16,21 @@ function Carrousel({ pictures }) {
 
   // if index is equal to the end of the prop length - 1 because array is indexed on 0, we return to the first index of the object to return to the first index
   // otherwise we just increase to the next index
-  function showNextImage() {
-    setImageIndex((index) => {
-      if (index === pictures.length - 1) return 0;
-      return index + 1;
-    });
-  }
+  const showNextImage = () => {
+    setImageIndex((index) => (index === pictures.length - 1 ? 0 : index + 1));
+  };
 
   // if index is equal to 0 we want to loop all the way around to get to the last index
   // otherwise we just reduce to the previous index
-  function showPrevImage() {
-    setImageIndex((index) => {
-      if (index === 0) return pictures.length - 1;
-      return index - 1;
-    });
-  }
+  const showPrevImage = () => {
+    setImageIndex((index) => (index === 0 ? pictures.length - 1 : index - 1));
+  };
 
   return (
     <>
       <div className="carrousel">
-        {/* carrousel img, map the pictures prop, if image is equal to imageIndex state variable, we render the mapped img*/}
-        {pictures.map((picture, index) => {
-          return (
-            <>
-              {index === imageIndex && (
-                <img
-                  key={index}
-                  className="carrousel_img"
-                  src={picture}
-                  alt=""
-                />
-              )}
-            </>
-          );
-        })}
+        <img className="carrousel_img" src={pictures[imageIndex]} alt="" />
+
         <button onClick={showNextImage} className="arrow arrow_right">
           <img src={arrow_right} alt="" />
         </button>
