@@ -10,7 +10,6 @@ function Collapse(prop) {
     <div className="collapse_container">
       <button
         className="collapse"
-        // event handler on collapse button executing the "openActive" function
         // toggles the value of "open" between true and false
         // "toggleOpen" is the parameter of the function which holds the previous value/state of "open"
         // logical NOT operator "!" inverses the boolean value toggeling "false" to "true" and "true" to "false"

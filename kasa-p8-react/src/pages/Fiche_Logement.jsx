@@ -28,7 +28,7 @@ function FicheLogement() {
             profile_name={logement.host.name}
             profile_img={logement.host.picture}
           />
-          <Ratings prop={logement.rating} />
+          <Ratings rating={logement.rating} />
         </div>
         <div className="logement_info">
           <div className="logement_info--titles">

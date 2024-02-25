@@ -1,15 +1,17 @@
 import star_active from "../assets/star_selected.png";
-// import star_inactive from "../assets/star-inactive.png";
+import star_inactive from "../assets/star-inactive.png";
 
-function Ratings() {
-  const range = [1, 2, 3, 4, 5];
-
+function Ratings({ rating }) {
+  // static rating component
+  // if rating prop is superior or equal to index, return active star, else inactive star
   return (
     <>
       <div className="ratings">
-        {range.map((star) => {
-          return <img key={star} src={star_active} alt="" />;
-        })}
+        <img src={rating >= 1 ? star_active : star_inactive} />
+        <img src={rating >= 2 ? star_active : star_inactive} />
+        <img src={rating >= 3 ? star_active : star_inactive} />
+        <img src={rating >= 4 ? star_active : star_inactive} />
+        <img src={rating >= 5 ? star_active : star_inactive} />
       </div>
     </>
   );
