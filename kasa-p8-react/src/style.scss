@@ -313,34 +313,34 @@ footer {
   position: relative;
 }
 
-.profile {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  right: 2.5em;
-  padding-top: 1em;
-  @media (max-width: 1000px) {
-    top: 6em;
-  }
-  @media (max-width: 600px) {
-    top: 8em;
-  }
-  img {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    @media (max-width: 1000px) {
-      width: 50px;
-      height: 50px;
-    }
-  }
-  h2 {
-    font-weight: normal;
-    color: $red;
-    padding-right: 1em;
-    font-size: large;
-  }
-}
+// .profile {
+//   display: flex;
+//   flex-direction: row;
+//   position: absolute;
+//   right: 2.5em;
+//   padding-top: 1em;
+//   @media (max-width: 1000px) {
+//     top: 6em;
+//   }
+//   @media (max-width: 600px) {
+//     top: 8em;
+//   }
+//   img {
+//     width: 65px;
+//     height: 65px;
+//     border-radius: 50%;
+//     @media (max-width: 1000px) {
+//       width: 50px;
+//       height: 50px;
+//     }
+//   }
+//   h2 {
+//     font-weight: normal;
+//     color: $red;
+//     padding-right: 1em;
+//     font-size: large;
+//   }
+// }
 
 .ratings {
   position: absolute;

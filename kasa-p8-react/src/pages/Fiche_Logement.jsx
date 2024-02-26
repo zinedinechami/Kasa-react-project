@@ -1,7 +1,7 @@
 import Footer from "../components/footer";
 import Carrousel from "../components/carrousel";
 import Collapse from "../components/collapse";
-import Profile from "../components/profile";
+import Profile from "../components/profile/profile.jsx";
 import Tag from "../components/tag";
 import Ratings from "../components/rating";
 import database from "../database.json";
@@ -11,11 +11,13 @@ import { useState, useEffect } from "react";
 function FicheLogement() {
   const { id } = useParams();
 
+  // local fetch
   const findLogement = (id) => {
     return database.find((findObject) => findObject.id === id);
   };
   const logement = findLogement(id);
 
+  // use state, use effect fetch
   const [data, fetchData] = useState(logement);
 
   useEffect(() => {

@@ -1,3 +1,5 @@
+import "./profile.css";
+
 export default function Profile(prop) {
   return (
     <>
