@@ -30,26 +30,27 @@ function FicheLogement() {
     <>
       <div className="logement">
         <Carrousel pictures={data?.pictures} />
-
-        <div className="profile_ratings">
-          <Profile
-            profile_name={data?.host?.name}
-            profile_img={data?.host?.picture}
-          />
-          <Ratings rating={data?.rating} />
-        </div>
-        <div className="logement_info">
-          <div className="logement_info--titles">
-            <h1 className="logement_title">{data?.title}</h1>
-            <h2 className="logement_location">{data?.location}</h2>
+        <div className="logement_flex">
+          <div className="logement_info">
+            <div className="logement_info--titles">
+              <h1 className="logement_title">{data?.title}</h1>
+              <h2 className="logement_location">{data?.location}</h2>
+            </div>
+          </div>
+          <div className="logement_tag">
+            {data?.tags.map((tag, index) => {
+              return <Tag key={index} tag_name={tag} />;
+            })}
+          </div>
+          <div className="profile_ratings">
+            <Profile
+              profile_name={data?.host?.name}
+              profile_img={data?.host?.picture}
+            />
+            <Ratings rating={data?.rating} />
           </div>
         </div>
 
-        <div className="logement_tag">
-          {data?.tags.map((tag, index) => {
-            return <Tag key={index} tag_name={tag} />;
-          })}
-        </div>
         <div className="logement_collapse">
           <Collapse title={"Description"} content={data?.description} />
 
