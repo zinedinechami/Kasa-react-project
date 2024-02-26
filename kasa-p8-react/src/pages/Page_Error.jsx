@@ -1,7 +1,7 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-function PageError() {
+export default function PageError() {
   return (
     <>
       <Header />
@@ -17,5 +17,3 @@ function PageError() {
     </>
   );
 }
-
-export default PageError;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Collapse(prop) {
+export default function Collapse(prop) {
   // hook use state objet containing the current value state variable "isActive"
   // the function "setIsActive" allowing the update of the state
   // the intial state of "isActive" is false
@@ -25,5 +25,3 @@ function Collapse(prop) {
 }
 
 // TODO: Add arrows to collapse, import arrows from an icon library
-
-export default Collapse;

@@ -1,6 +1,6 @@
 import kasa_logo_footer from "../assets/kasa_logo_footer.png";
 
-function Footer() {
+export default function Footer() {
   return (
     <>
       <footer>
@@ -12,5 +12,3 @@ function Footer() {
     </>
   );
 }
-
-export default Footer;

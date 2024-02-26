@@ -3,7 +3,7 @@ import Card from "../components/card";
 import Banner from "../components/banner";
 import Footer from "../components/footer";
 
-function Acceuil() {
+export default function Acceuil() {
   return (
     <>
       <Banner
@@ -19,5 +19,3 @@ function Acceuil() {
     </>
   );
 }
-
-export default Acceuil;

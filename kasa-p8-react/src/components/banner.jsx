@@ -1,4 +1,4 @@
-function Banner(prop) {
+export default function Banner(prop) {
   return (
     <>
       <div className="banner">
@@ -8,5 +8,3 @@ function Banner(prop) {
     </>
   );
 }
-
-export default Banner;

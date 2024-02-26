@@ -1,7 +1,7 @@
 import star_active from "../assets/star_selected.png";
 import star_inactive from "../assets/star-inactive.png";
 
-function Ratings({ rating }) {
+export default function Ratings({ rating }) {
   // static rating component
   // if rating prop is superior or equal to index, return active star, else inactive star
   return (
@@ -16,5 +16,3 @@ function Ratings({ rating }) {
     </>
   );
 }
-
-export default Ratings;

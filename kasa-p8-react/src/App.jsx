@@ -30,8 +30,6 @@ const router = createBrowserRouter([
 ]);
 
 // affichage du routeur et des components compris dedans, dans l'application avec router providor
-function App() {
+export default function App() {
   return <RouterProvider router={router} />;
 }
-
-export default App;

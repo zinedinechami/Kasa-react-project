@@ -1,6 +1,6 @@
 import database from "../database.json";
 
-function Card() {
+export default function Card() {
   return (
     <>
       {database.map((database) => {
@@ -16,5 +16,3 @@ function Card() {
     </>
   );
 }
-
-export default Card;

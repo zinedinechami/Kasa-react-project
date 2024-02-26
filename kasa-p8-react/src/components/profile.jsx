@@ -1,6 +1,4 @@
-// import example_img from "../assets/example.jpg";
-
-function Profile(prop) {
+export default function Profile(prop) {
   return (
     <>
       <div className="profile">
@@ -10,5 +8,3 @@ function Profile(prop) {
     </>
   );
 }
-
-export default Profile;

@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom";
 import kasa_logo from "../assets/kasa_logo.png";
+import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
-function Header() {
+export default function Header() {
   return (
     <>
       <header>
@@ -16,5 +16,3 @@ function Header() {
     </>
   );
 }
-
-export default Header;
