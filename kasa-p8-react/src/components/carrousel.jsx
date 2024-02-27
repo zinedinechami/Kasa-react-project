@@ -22,15 +22,21 @@ export default function Carrousel({ pictures }) {
     <>
       <div className="carrousel">
         <img className="carrousel_img" src={pictures[imageIndex]} alt="" />
-        <button onClick={showNextImage} className="arrow arrow_right">
-          <img src={arrow_right} alt="" />
-        </button>
-        <button onClick={showPrevImage} className="arrow arrow_left">
-          <img src={arrow_left} alt="" />
-        </button>
-        <p className="carrousel_counter">
-          {[imageIndex + 1]} / {pictures.length}
-        </p>
+        {pictures.length > 1 && (
+          <div>
+            <button onClick={showNextImage} className="arrow arrow_right">
+              <img src={arrow_right} alt="" />
+            </button>
+            <button onClick={showPrevImage} className="arrow arrow_left">
+              <img src={arrow_left} alt="" />
+            </button>
+          </div>
+        )}
+        {pictures.length > 1 && (
+          <p className="carrousel_counter">
+            {[imageIndex + 1]} / {pictures.length}
+          </p>
+        )}
       </div>
     </>
   );

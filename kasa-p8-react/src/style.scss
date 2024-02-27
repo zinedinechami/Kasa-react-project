@@ -276,9 +276,17 @@ footer {
     cursor: pointer;
     &_right {
       right: 10px;
+      top: 40%;
+      @media (max-width: 1000px) {
+        top: 50%;
+      }
     }
     &_left {
       left: 10px;
+      top: 40%;
+      @media (max-width: 1000px) {
+        top: 50%;
+      }
     }
     img {
       @media (max-width: 1000px) {

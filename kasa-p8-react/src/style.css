@@ -284,9 +284,21 @@ footer .footer__content {
 }
 .carrousel .arrow_right {
   right: 10px;
+  top: 40%;
+}
+@media (max-width: 1000px) {
+  .carrousel .arrow_right {
+    top: 50%;
+  }
 }
 .carrousel .arrow_left {
   left: 10px;
+  top: 40%;
+}
+@media (max-width: 1000px) {
+  .carrousel .arrow_left {
+    top: 50%;
+  }
 }
 @media (max-width: 1000px) {
   .carrousel .arrow img {
