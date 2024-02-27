@@ -1,5 +1,5 @@
 import star_active from "../assets/star_selected.png";
-import star_inactive from "../assets/star-inactive.png";
+import star_inactive from "../assets/star_inactive.png";
 
 export default function Ratings({ rating }) {
   // static rating component
