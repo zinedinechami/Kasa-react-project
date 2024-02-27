@@ -11,25 +11,19 @@ import { useState, useEffect } from "react";
 function FicheLogement() {
   const { id } = useParams();
 
-  // local fetch
-  const findLogement = (id) => {
-    return database.find((findObject) => findObject.id === id);
-  };
-  const logement = findLogement(id);
-
   // use state, use effect fetch
-  const [data, fetchData] = useState(logement);
+  const [data, fetchData] = useState(null);
 
   useEffect(() => {
     fetchData(database.find((findObject) => findObject.id === id));
   }, [data, id]);
 
-  console.log(data);
-
+  // le state commence avec un valeur absente intentionelle, quand le state est mis a jour dans le useEffect
+  // on render les component a condition que data a une valeur
   return (
     <>
       <div className="logement">
-        <Carrousel pictures={data?.pictures} />
+        {data && <Carrousel pictures={data?.pictures} />}
         <div className="logement_flex">
           <div className="logement_info">
             <div className="logement_info--titles">
@@ -38,23 +32,28 @@ function FicheLogement() {
             </div>
           </div>
           <div className="logement_tag">
-            {data?.tags.map((tag, index) => {
-              return <Tag key={index} tag_name={tag} />;
-            })}
+            {data &&
+              data?.tags.map((tag, index) => {
+                return <Tag key={index} tag_name={tag} />;
+              })}
           </div>
           <div className="profile_ratings">
-            <Profile
-              profile_name={data?.host?.name}
-              profile_img={data?.host?.picture}
-            />
-            <Ratings rating={data?.rating} />
+            {data && (
+              <Profile
+                profile_name={data?.host?.name}
+                profile_img={data?.host?.picture}
+              />
+            )}
+            {data && <Ratings rating={data?.rating} />}
           </div>
         </div>
 
         <div className="logement_collapse">
-          <Collapse title={"Description"} content={data?.description} />
+          {data && (
+            <Collapse title={"Description"} content={data?.description} />
+          )}
 
-          <Collapse title={"Equipement"} content={data?.equipments} />
+          {data && <Collapse title={"Equipement"} content={data?.equipments} />}
         </div>
       </div>
       <Footer />
