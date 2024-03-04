@@ -1,0 +1,32 @@
+:root {
+  --red: #ff6060;
+  --grey: #f6f6f6;
+}
+
+.collapse {
+  background-color: var(--red);
+  color: white;
+  font-family: Montserrat;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 20px;
+  position: relative;
+}
+
+.collapse_content {
+  background-color: #f6f6f6;
+  padding: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: height 200ms;
+}
+
+.collapse_arrows {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}

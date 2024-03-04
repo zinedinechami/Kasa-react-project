@@ -1,23 +1,26 @@
+:root {
+  --red: #ff6060;
+  --grey: #f6f6f6;
+}
+
 .profile {
   display: flex;
   flex-direction: row;
   padding-top: 1em;
   justify-content: flex-end;
-}
-.profile img {
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-}
-@media (max-width: 1000px) {
-  .profile img {
-    width: 50px;
-    height: 50px;
+  img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    @media (max-width: 1000px) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  h2 {
+    font-weight: normal;
+    color: var(--red);
+    padding-right: 1em;
+    font-size: large;
   }
 }
-.profile h2 {
-  font-weight: normal;
-  color: #ff6060;
-  padding-right: 1em;
-  font-size: large;
-}/*# sourceMappingURL=profile.css.map */

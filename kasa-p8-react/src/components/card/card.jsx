@@ -1,4 +1,5 @@
-import database from "../database.json";
+import database from "../../database.json";
+import "./card.css";
 
 export default function Card() {
   return (

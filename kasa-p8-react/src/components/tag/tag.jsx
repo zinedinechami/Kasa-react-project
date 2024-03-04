@@ -1,3 +1,5 @@
+import "./tag.css";
+
 export default function Tag(prop) {
   return (
     <>

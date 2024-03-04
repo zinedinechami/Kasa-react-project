@@ -1,4 +1,5 @@
-import kasa_logo_footer from "../assets/kasa_logo_footer.png";
+import kasa_logo_footer from "./kasa_logo_footer.png";
+import "./footer.css";
 
 export default function Footer() {
   return (

@@ -1,25 +1,23 @@
-import Footer from "../components/footer";
-import Carrousel from "../components/carrousel";
-import Collapse from "../components/collapse";
+import Footer from "../components/footer/footer.jsx";
+import Carrousel from "../components/carrousel/carrousel.jsx";
+import Collapse from "../components/collapse/collapse.jsx";
 import Profile from "../components/profile/profile.jsx";
-import Tag from "../components/tag";
-import Ratings from "../components/rating";
+import Tag from "../components/tag/tag";
+import Ratings from "../components/rating/rating.jsx";
 import database from "../database.json";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-function FicheLogement() {
+export default function FicheLogement() {
   const { id } = useParams();
-
-  // use state, use effect fetch
-  const [data, fetchData] = useState(null);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetchData(database.find((findObject) => findObject.id === id));
+    setData(database.find((findObject) => findObject.id === id));
   }, [data, id]);
 
-  // le state commence avec un valeur absente intentionelle, quand le state est mis a jour dans le useEffect
-  // on render les component a condition que data a une valeur
+  // le state commence avec un valeur absente, quand le state est mis a jour dans le useEffect,
+  // on render les component a condition que data a une valeur.
   return (
     <>
       <div className="logement">
@@ -60,7 +58,3 @@ function FicheLogement() {
     </>
   );
 }
-
-export default FicheLogement;
-
-// you are going to map directly inside, the components and add the id key directly here as a key, use variable id

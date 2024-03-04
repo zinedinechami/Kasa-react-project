@@ -1,0 +1,26 @@
+:root {
+  --red: #ff6060;
+  --grey: #f6f6f6;
+}
+
+article {
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  background-color: var(--red);
+  position: relative;
+  @media (max-width: 1000px) {
+    width: 100%;
+    height: 260px;
+  }
+  img {
+    object-fit: cover;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    @media (max-width: 1000px) {
+      width: 100%;
+      height: 260px;
+    }
+  }
+}

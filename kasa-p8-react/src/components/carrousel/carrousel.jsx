@@ -1,6 +1,7 @@
 // ex: database.id.image
-import arrow_right from "../assets/arrow_right.png";
-import arrow_left from "../assets/arrow_left.png";
+import arrow_right from "./arrow_right.png";
+import arrow_left from "./arrow_left.png";
+import "./carrousel.css";
 import { useState } from "react";
 
 export default function Carrousel({ pictures }) {
@@ -41,5 +42,3 @@ export default function Carrousel({ pictures }) {
     </>
   );
 }
-
-// TODO: and make arrows and counter dissapear if there is only one image

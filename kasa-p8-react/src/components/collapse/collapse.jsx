@@ -1,4 +1,6 @@
 import { useState } from "react";
+import collapse_arrow from "./collapse_arrow.png";
+import "./collapse.css";
 
 export default function Collapse(prop) {
   // hook use state objet containing the current value state variable "isActive"
@@ -16,7 +18,9 @@ export default function Collapse(prop) {
         onClick={() => openActive((toggleOpen) => !toggleOpen)}
       >
         <div>{prop.title}</div>
-        {/* <div className="collapse_arrows">{open ? "-" : "+"}</div> */}
+        <div className="collapse_arrows">
+          <img src={collapse_arrow} alt="" />
+        </div>
       </button>
       {/* if "open" value is true, the output will be the div containing the content of the collapse*/}
       {open && <div className="collapse_content">{prop.content}</div>}

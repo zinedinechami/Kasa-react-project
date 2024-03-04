@@ -3,7 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Acceuil from "./pages/Acceuil.jsx";
 import A_Propos from "./pages/A_Propos.jsx";
 import FicheLogement from "./pages/Fiche_Logement.jsx";
-import Header from "./components/header.jsx";
+import Header from "./components/header/header.jsx";
 import PageError from "./pages/Page_Error.jsx";
 
 // creation du routeur version v6 de react router

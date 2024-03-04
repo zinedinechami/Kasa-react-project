@@ -1,0 +1,17 @@
+:root {
+  --red: #ff6060;
+  --grey: #f6f6f6;
+}
+
+.tag {
+  background-color: var(--red);
+  width: auto;
+  padding-left: 2em;
+  padding-right: 2em;
+  color: white;
+  text-align: center;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}

@@ -1,0 +1,16 @@
+.ratings {
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 1000px) {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+  }
+
+  img {
+    padding-top: 0.5em;
+    padding-right: 0.5em;
+    height: 20px;
+  }
+}

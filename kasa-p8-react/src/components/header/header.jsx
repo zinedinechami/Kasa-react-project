@@ -1,6 +1,7 @@
-import kasa_logo from "../assets/kasa_logo.png";
+import kasa_logo from "./kasa_logo.png";
 import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import "./header.css";
 
 export default function Header() {
   return (
