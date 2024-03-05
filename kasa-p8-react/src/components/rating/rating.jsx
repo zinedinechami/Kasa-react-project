@@ -3,8 +3,6 @@ import star_inactive from "./star_inactive.png";
 import "./rating.css";
 
 export default function Ratings({ rating }) {
-  // static rating component
-  // if rating prop is superior or equal to index, return active star, else inactive star
   return (
     <>
       <div className="ratings">

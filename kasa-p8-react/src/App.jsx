@@ -6,7 +6,6 @@ import FicheLogement from "./pages/Fiche_Logement.jsx";
 import Header from "./components/header/header.jsx";
 import PageError from "./pages/Page_Error.jsx";
 
-// creation du routeur version v6 de react router
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,7 +28,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-// affichage du routeur et des components compris dedans, dans l'application avec router providor
 export default function App() {
   return <RouterProvider router={router} />;
 }

@@ -16,8 +16,6 @@ export default function FicheLogement() {
     setData(database.find((findObject) => findObject.id === id));
   }, [data, id]);
 
-  // le state commence avec un valeur absente, quand le state est mis a jour dans le useEffect,
-  // on render les component a condition que data a une valeur.
   return (
     <>
       <div className="logement">
