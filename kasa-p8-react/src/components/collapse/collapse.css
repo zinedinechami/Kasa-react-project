@@ -3,7 +3,7 @@
   --grey: #f6f6f6;
 }
 
-.collapse {
+.collapse_container button {
   background-color: var(--red);
   color: white;
   font-family: Montserrat;
