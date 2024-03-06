@@ -1,12 +1,13 @@
-import Footer from "../components/footer/footer.jsx";
-import Carrousel from "../components/carrousel/carrousel.jsx";
-import Collapse from "../components/collapse/collapse.jsx";
-import Profile from "../components/profile/profile.jsx";
-import Tag from "../components/tag/tag";
-import Ratings from "../components/rating/rating.jsx";
-import database from "../database.json";
+import Footer from "../../components/footer/footer.jsx";
+import Carrousel from "../../components/carrousel/carrousel.jsx";
+import Collapse from "../../components/collapse/collapse.jsx";
+import Profile from "../../components/profile/profile.jsx";
+import Tag from "../../components/tag/tag.jsx";
+import Ratings from "../../components/rating/rating.jsx";
+import database from "../../database.json";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import "./fiche_logement.css";
 
 export default function FicheLogement() {
   const { id } = useParams();

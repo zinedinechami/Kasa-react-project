@@ -1,0 +1,22 @@
+:root {
+  --red: #ff6060;
+  --grey: #f6f6f6;
+}
+
+.error_page {
+  text-align: center;
+  color: var(--red);
+  h1 {
+    font-size: 200px;
+  }
+  h2 {
+    font-weight: normal;
+    padding-bottom: 2em;
+    @media (max-width: 1000px) {
+      padding: 1em;
+    }
+  }
+  a {
+    color: var(--red);
+  }
+}

@@ -1,7 +1,8 @@
-import a_propos_header_img from "../assets/a_propos_header_img.png";
-import Banner from "../components/banner/banner";
-import Footer from "../components/footer/footer";
-import Collapse from "../components/collapse/collapse.jsx";
+import a_propos_header_img from "./a_propos_header_img.png";
+import Banner from "../../components/banner/banner.jsx";
+import Footer from "../../components/footer/footer.jsx";
+import Collapse from "../../components/collapse/collapse.jsx";
+import "./a_propos.css";
 
 export default function A_Propos() {
   return (

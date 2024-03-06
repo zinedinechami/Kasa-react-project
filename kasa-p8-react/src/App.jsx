@@ -1,10 +1,10 @@
 import "./style.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Acceuil from "./pages/Acceuil.jsx";
-import A_Propos from "./pages/A_Propos.jsx";
-import FicheLogement from "./pages/Fiche_Logement.jsx";
+import Acceuil from "./pages/acceuil/Acceuil.jsx";
+import A_Propos from "./pages/a_propos/A_Propos.jsx";
+import FicheLogement from "./pages/fiche_logement/Fiche_Logement.jsx";
 import Header from "./components/header/header.jsx";
-import PageError from "./pages/Page_Error.jsx";
+import PageError from "./pages/page_error/Page_Error.jsx";
 
 const router = createBrowserRouter([
   {
