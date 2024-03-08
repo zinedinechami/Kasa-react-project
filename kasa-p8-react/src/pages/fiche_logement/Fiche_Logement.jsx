@@ -47,7 +47,6 @@ export default function FicheLogement() {
               {data && <Ratings rating={data?.rating} />}
             </div>
           </div>
-
           <div className="logement_collapse">
             {data && (
               <Collapse title={"Description"} content={data?.description} />

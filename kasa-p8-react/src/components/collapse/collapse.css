@@ -29,10 +29,6 @@
   position: absolute;
   right: 1em;
   top: 1em;
-  :hover {
-    transform: rotate(180deg);
-    transition: 0.2s;
-  }
 }
 
 :hover .collapse_arrows div {

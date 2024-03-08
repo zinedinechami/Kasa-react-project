@@ -13,10 +13,7 @@ export default function Collapse(prop) {
           <img src={collapse_arrow} alt="" />
         </div>
       </button>
-
       {open && <div className="collapse_content">{prop.content}</div>}
     </div>
   );
 }
-
-// TODO: add rotating annimation to arrow when pressed
