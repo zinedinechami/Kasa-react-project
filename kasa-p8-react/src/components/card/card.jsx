@@ -4,12 +4,12 @@ import "./card.css";
 export default function Card() {
   return (
     <>
-      {database.map((database) => {
+      {database.map((data) => {
         return (
-          <a key={database.id} href={"logement/" + database.id}>
+          <a key={data.id} href={"logement/" + data.id}>
             <article>
-              <img src={database.cover} alt="" />
-              <p>{database.title}</p>
+              <img src={data.cover} alt="" />
+              <p>{data.title}</p>
             </article>
           </a>
         );

@@ -18,3 +18,5 @@ export default function Collapse(prop) {
     </div>
   );
 }
+
+// TODO: add rotating annimation to arrow when pressed
