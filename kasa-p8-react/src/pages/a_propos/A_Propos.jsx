@@ -2,11 +2,13 @@ import a_propos_header_img from "./a_propos_header_img.png";
 import Banner from "../../components/banner/banner.jsx";
 import Footer from "../../components/footer/footer.jsx";
 import Collapse from "../../components/collapse/collapse.jsx";
+import Header from "../../components/header/header.jsx";
 import "./a_propos.css";
 
 export default function A_Propos() {
   return (
     <>
+      <Header />
       <Banner banner_image={a_propos_header_img} />
       <div className="a_propos_content">
         {/* collapse 1 */}

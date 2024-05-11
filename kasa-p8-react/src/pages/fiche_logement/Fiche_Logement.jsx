@@ -5,6 +5,7 @@ import Profile from "../../components/profile/profile.jsx";
 import Tag from "../../components/tag/tag.jsx";
 import Ratings from "../../components/rating/rating.jsx";
 import PageError from "../page_error/Page_Error.jsx";
+import Header from "../../components/header/header.jsx";
 import database from "../../database.json";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -20,6 +21,7 @@ export default function FicheLogement() {
 
   return (
     <>
+      <Header />
       {data === undefined && <PageError />}
       {data && (
         <div className="logement">

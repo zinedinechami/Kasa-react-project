@@ -1,4 +1,4 @@
-import Footer from "../../components/footer/footer.jsx";
+
 import "./page_error.css";
 
 export default function PageError() {
@@ -11,7 +11,6 @@ export default function PageError() {
           <p>Retourner sur la page d&#39; accueil</p>
         </a>
       </div>
-      <Footer />
     </>
   );
 }
